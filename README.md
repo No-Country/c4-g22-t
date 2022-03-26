@@ -19,6 +19,9 @@ Tecnologia para el Backend
 * Bcryptjs
 * Crypto
 * Nodemailer
+
+Base de datos
+**MongoDb**
 ```
 
 
