@@ -1,8 +1,24 @@
-.titleProduct{
+div .titleProduct{
     color: #FB2E86;
-    text-align: center;
+    font-size: 18px;
+}
+.sectionTitle{
+    font-family: 'Josefin Sans', sans-serif;
 }
 .price{
     color:#151875;
+}
+.alignCenter{
     text-align: center;
+}
+
+
+.wrapper{
+    position: relative;
+}
+.floatingButtons{
+    width: 100%;
+    position: absolute;
+    padding: 2px;
+    bottom: -50%;
 }
