@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Button } from '@mui/material';
 import './featureProduct.css'
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
@@ -53,6 +53,10 @@ export default function FeatureProduct() {
                   <Typography  variant="button" component="div" className='price alignCenter'>
                     $ 42.00
                   </Typography>
+                  <Button sx={{marginY:'20px'}}variant="contained" fullWidth={true}
+                                    size="large"
+                                    > Agregar al carrito
+                                </Button>
                 </CardContent>
             </CardActionArea>
           </Card>
