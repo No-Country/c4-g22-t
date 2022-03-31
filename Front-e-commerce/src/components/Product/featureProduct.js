@@ -1,23 +1,18 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import '@fontsource/roboto/500.css';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea, Button } from '@mui/material';
+import { CardActionArea, Button, Typography, CardMedia, CardContent, Card, Paper, Box } from '@mui/material';
 import './featureProduct.css'
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
 </style>
 
 const urlImgs="./products/"
 
+
+
 export default function FeatureProduct() {
     return (
       <>
-        <Typography gutterBottom variant="h6" component="div" className='sectionTitle alignCenter'>
+        <Typography sx={{marginY:'3rem'}} variant="h6" component="div" className='sectionTitle alignCenter'>
           Featured Products 
         </Typography>
         
@@ -33,9 +28,7 @@ export default function FeatureProduct() {
         >
           <Paper elevation={12}>
           <Card>
-            <Box className='floatingButtons'>
-              sdfsd
-            </Box>
+            
             <CardActionArea>
                 <CardMedia
                   component="img"
