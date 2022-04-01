@@ -1,15 +1,26 @@
 import './App.css';
-import FeatureProduct from './components/Product/featureProduct'
-import Container from '@mui/material/Container';
+import Homepage from './pages/Homepage';
+import Navbar from './components/Navbar/Navbar';
+import {BrowserRouter, Routes, Route}  from 'react-router-dom';
 
 
 function App() {
   return (
-    
-    <Container maxWidth="lg">
-        <FeatureProduct/>
-      </Container>
+      <>
+
+          <BrowserRouter>
+            <Navbar/>
+            <Routes>
+              <Route path="/" element={<Homepage/>}/>
+            </Routes>
+          </BrowserRouter>
+          
+  
+
+      </>
   );
+    
+    
 }
 
 export default App;
