@@ -6,6 +6,8 @@ import TrendingProduct from "./components/Trending-product/index.js";
 import "./components/W-S-O/index.css";
 import "./components/Trending-product/index.css";
 import {BrowserRouter, Routes, Route}  from 'react-router-dom';
+import Store from './pages/Store';
+import ProductDetail from './pages/ProductDetail';
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
             <Navbar/>
             <Routes>
               <Route path="/" element={<Homepage/>}/>
+              <Route path="/tienda" element={<Store/>}/>
+              <Route path="/producto/:category/:id" element={<ProductDetail/>}/>
             </Routes>
             <AddWSO/>
             <TrendingProduct/>
