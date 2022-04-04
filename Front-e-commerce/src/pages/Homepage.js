@@ -1,8 +1,13 @@
 import ReactDOM from 'react-dom';
 import { useEffect } from 'react';
-import FeatureProduct from '../components/Product/featureProduct'
+import ItemListContainer from '../components/Product/ItemListContainer'
 import Container from '@mui/material/Container';
-import ProductSlider from '../components/Slider/Slider'
+import ProductSlider from '../components/Slider/Slider';
+import { Typography } from '@mui/material';
+import AddWSO from "../components/W-S-O/index.js";
+import TrendingProduct from "../components/Trending-product/index.js";
+import "../components/W-S-O/index.css";
+import "../components/Trending-product/index.css";
 
 
 
@@ -10,27 +15,17 @@ const slides = [
   {
     city: 'Mumbai',
     country: 'MAHIRA KHAN',
-    img: 'https://wallpapercave.com/wp/wp4112823.jpg',
+    img: 'https://umea.qodeinteractive.com/wp-content/uploads/2020/12/h5-slider-img-1.jpg',
   },
   {
     city: 'Delhi',
-    img: 'https://wallpapercave.com/wp/wp4112857.jpg',
+    img: 'https://umea.qodeinteractive.com/wp-content/uploads/2021/01/h5-slider-img-2-1.jpg',
   },
   {
     city: 'Khandala',
     country: 'India',
-    img: 'https://wallpapercave.com/wp/wp4112854.jpg',
-  },
-  {
-    city: 'Amsterdam',
-    country: 'Netherlands',
-    img: 'https://wallpapercave.com/wp/wp4112810.jpg',
-  },
-  {
-    city: 'Moscow',
-    country: 'Russia',
-    img: 'https://wallpapercave.com/wp/wp2864001.jpg',
-  },
+    img: 'https://tobel.qodeinteractive.com/wp-content/uploads/2021/06/home-2-rev-s-4.jpg',
+  }
 ];
 
 
@@ -55,8 +50,13 @@ function Homepage() {
       </div>
       <Container maxWidth="lg">
         
-      
-        <FeatureProduct/>
+      <Typography sx={{marginY:'3rem'}} variant="h6" component="div" className='sectionTitle alignCenter'>
+          Featured Products 
+        </Typography>
+        
+        <ItemListContainer/>
+        <AddWSO/>
+        <TrendingProduct/>
       </Container>
     </>
     

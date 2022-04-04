@@ -1,11 +1,11 @@
 import './App.css';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar/Navbar';
-import AddWSO from "./components/W-S-O/index.js";
-import TrendingProduct from "./components/Trending-product/index.js";
-import "./components/W-S-O/index.css";
-import "./components/Trending-product/index.css";
 import {BrowserRouter, Routes, Route}  from 'react-router-dom';
+import Store from './pages/Store';
+import ProductDetail from './pages/ProductDetail';
+import AddNavbar from './components/headerTemporal';
+import './components/headerTemporal/index.css';
 
 
 function App() {
@@ -13,12 +13,12 @@ function App() {
       <>
 
           <BrowserRouter>
-            <Navbar/>
+            <AddNavbar/>
             <Routes>
               <Route path="/" element={<Homepage/>}/>
+              <Route path="/tienda" element={<Store/>}/>
+              <Route path="/producto/:category/:id" element={<ProductDetail/>}/>
             </Routes>
-            <AddWSO/>
-            <TrendingProduct/>
           </BrowserRouter>
           
   
