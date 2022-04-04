@@ -4,6 +4,10 @@ import ItemListContainer from '../components/Product/ItemListContainer'
 import Container from '@mui/material/Container';
 import ProductSlider from '../components/Slider/Slider';
 import { Typography } from '@mui/material';
+import AddWSO from "../components/W-S-O/index.js";
+import TrendingProduct from "../components/Trending-product/index.js";
+import "../components/W-S-O/index.css";
+import "../components/Trending-product/index.css";
 
 
 
@@ -51,6 +55,8 @@ function Homepage() {
         </Typography>
         
         <ItemListContainer/>
+        <AddWSO/>
+        <TrendingProduct/>
       </Container>
     </>
     
