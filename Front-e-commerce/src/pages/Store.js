@@ -6,7 +6,7 @@ import AddWhereIAm from '../components/whereIAm';
 function Store() {
   return (
     <>
-        <AddWhereIAm/>
+        <AddWhereIAm whereIAm="Store"/>
         <Container maxWidth="lg">
             <h1>Tienda</h1>
             
