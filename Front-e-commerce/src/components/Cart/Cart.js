@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import CartContext from '../context/CartContext';
 import { Container, TableContainer, Table, TableHead, TableRow, TableCell,TableBody } from '@mui/material'
 import './cart.css'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const urlImgs = "/products/"
@@ -32,7 +33,8 @@ const Cart = () => {
                                                <TableCell align="center">Producto</TableCell>
                                                <TableCell align="center">Precio</TableCell>
                                                <TableCell align="center">Cantidad</TableCell>
-                                               <TableCell align="center">Total</TableCell>
+                                               <TableCell align="center">Total</TableCell>                                            
+                                               <TableCell align="center"></TableCell>
                                              </TableRow>
                                            </TableHead>
                                            <TableBody>
@@ -47,6 +49,7 @@ const Cart = () => {
                                                     <TableCell align="center">{price}</TableCell>
                                                     <TableCell align="center">{quantityToAdd}</TableCell>
                                                     <TableCell align="center">Total</TableCell>
+                                                    <TableCell align="center"><DeleteIcon className='deleteButton' onClick={() => removeItem(id) } /></TableCell>
                                                 </TableRow>
                                            </TableBody>
                                          </Table>
