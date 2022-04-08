@@ -17,7 +17,7 @@ function App() {
 
           <CartProvider>
             <BrowserRouter>
-              <Navbar/>
+              <AddNavbar/>
               <Routes>
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="/order%20completed" element={<PageOrderCompleted/>}/>
