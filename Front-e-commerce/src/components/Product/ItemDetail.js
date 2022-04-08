@@ -1,27 +1,37 @@
-import React from 'react'
+import {useState, useContext} from 'react';
 import './ItemDetail.css'
-import { Box, Grid, Button, Stack, TextField } from '@mui/material'
+import { Box, Grid, Button } from '@mui/material'
+import ItemCount from './ItemCount';
+import CartContext from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 
 
 const urlImgs = "/products/"
 
 
-const ItemDetail = ({producto, idProduct}) => {
+const ItemDetail = ({producto}) => {
+
+    const {id, title, detail, img, price, stock} = producto
+
+    const {addProductToCart} = useContext(CartContext)
+    
+    const [quantityAdded, setQuantityAdded] = useState(0)
+
+    const onAdd = (quantityToAdd) =>{
+        console.log(`Productos agregados: ${quantityToAdd}`)
+        setQuantityAdded(quantityAdded+quantityToAdd)
+        addProductToCart(producto, quantityToAdd)
+    }
+
+    
+
 
 
     return (
     <>
-                
-                
-
-        {producto.map( ( product ) => {            
-            const {id, title, price, detail, img, stock, category} = product
-            
-            if (id==idProduct){
-                    
-                return(
                     <Box  sx={{ flexGrow: 1, paddingY: 10  }}  key={id}>
+                        
                         <Grid   container
                                 direction="row"
                                 justifyContent="flex-start"
@@ -29,31 +39,30 @@ const ItemDetail = ({producto, idProduct}) => {
                             <Grid item xs={6}>
                                 <img src={urlImgs+img}/>
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs={6}>
                                 <Box className="productTitle">{title}</Box>
                                 <Box className="price">$ {price}</Box>
-                                <Box className="stock"><b>Stock:</b> {stock}</Box>
                                 <Box className="detail">{detail}</Box>
-                                <Stack spacing={0} direction="row" margin="30px 0">                
-                                    <Button variant="outlined">-</Button>
-                                    <TextField id="outlined-size-normal" value="1" variant="outlined"/>
-                                    <Button variant="outlined">+</Button>
-                                </Stack>
-                                <Button variant="contained" fullWidth={true}
-                                    size="large"
-                                    > Agregar al carrito
-                                </Button>
-                                <Box className="category"><b>Categoría</b>s: {category}</Box>
+
+                                {
+                                    <Box    container
+                                            direction="row"
+                                            justifyContent="flex-start" className='actionButtonsContainer'>
+                                                
+                                        <Box className="quantity"><b>Cantidad: </b>{quantityAdded}</Box>
+                                        
+                                        <ItemCount stock={stock} initial={1} onAdd={onAdd}></ItemCount>
+
+                                        
+                                        <Link to={`/cart`}><Button variant="contained" size="large" className='actionButtons'> Finalizar compra</Button></Link>
+                                    </Box>
+
+                                }                                
                             </Grid>
                         </Grid>
                     </Box>
                     
-                );
-            }
-
-                
-        })}        
-                
+            
     
     </>
     );

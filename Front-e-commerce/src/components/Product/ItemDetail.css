@@ -22,3 +22,7 @@ body {
 .category {
     padding-block: 3rem;
 }
+.quantity {
+    background: #e7f0f9;
+    padding: 1rem;
+}

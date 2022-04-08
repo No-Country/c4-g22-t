@@ -1,27 +1,36 @@
 import { useState, useEffect } from "react"
 import ListProducts from '../utils/listProducts'
 import ItemDetail from "./ItemDetail"
+import {useParams} from 'react-router-dom'
 
 
 
 
 const urlImgs = "/images/"
 
-const ItemDetailContainer = ({idProducto}) => {
+
+const ItemDetailContainer = () => {
+
+    const { id} = useParams()
 
     const [product, setProduct] = useState([])
 
-    const getItem = () => {
+    const getProduct = () => {
         return new Promise((resolve, reject) => {
             return setTimeout(() => {
                 resolve(ListProducts)
-            },2000);
+            });
         })
-    }
-        
+    } 
+
     useEffect( () => {
-        getItem().then( (addProducts) => {
-            setProduct(addProducts)            
+        getProduct().then( (filterProducts) => {  
+            filterProducts.map( (productFound)  => {
+                if (productFound.id == id){
+                    return setProduct(productFound)  
+                }
+            })
+                                     
         }).catch( (error) =>{
             console.log(error)
         }).finally( () => {
@@ -32,12 +41,9 @@ const ItemDetailContainer = ({idProducto}) => {
 
     return(
         <>
-        
-            <div className='container-cards'>
-                
-                <ItemDetail producto={product} idProduct={idProducto}/>
-            </div>
-            
+        <div className='container-cards'>                    
+                        <ItemDetail producto={product}/>
+                    </div>
         </>
     );
 
