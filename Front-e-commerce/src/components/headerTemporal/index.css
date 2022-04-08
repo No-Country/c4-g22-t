@@ -1,3 +1,12 @@
+.preHeader {
+  background: #7E33E0;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -6,21 +15,22 @@
     position: relative;
   }
   /* header no existe en este prototipo aun */
-  .mi-logo {
-    width: 48px;
-  }
-  
-  .header__menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(black, grey, black);
-  }
+  #logo {
+    font-size: 2rem;
+}
+
+.header__menu-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+}
   .header__menu {
     width: 36px;
   }
-  
   
   
   
@@ -41,19 +51,17 @@
  
   
   .header__a {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 1rem;
     text-align: center;
     text-decoration: none;
-    padding: 20px 40px;
-    color: black;
-  }
-  
-    .header__a:hover {
-      color: aqua;
-      background-color: black;
-      border-radius: 10px;
-    }
+    padding: 2rem 1.5rem;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+}
+.header__a:hover {
+  color: #FB2E86;
+  border-radius: 0;
+}
   
   

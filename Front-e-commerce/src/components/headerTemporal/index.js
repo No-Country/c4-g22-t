@@ -1,23 +1,65 @@
+import * as React from 'react';
+import { Stack, Autocomplete, TextField, Button } from '@mui/material'
+import ListProducts from '../utils/listProducts';
+import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
+
+
 export function AddNavbar() {
+
+  
+  const [product, setProduct] = useState([])
+
+  const getProduct = () => {
+    return new Promise((resolve, reject) => {
+        return setTimeout(() => {
+            resolve(ListProducts)
+        });
+    })
+  } 
+
+  useEffect( () => {
+      getProduct().then( (filterProducts) => {  
+        setProduct(filterProducts)            
+      }).catch( (error) =>{
+          console.log(error)
+      })
+  }, [])
+
+
+
+
   return (
-    <div class="header__menu-container">
-      <div class="header__nav-container">
-        <nav class="header__nav">
-          <ul class="header__ul">
-            <a class="header__a" href="/">
-              Home Page
-            </a>
-            <a class="header__a" href="">
-              No funciono
-            </a>
-            <a class="header__a" href="">
-              Yo tampoco
-            </a>
-            <a class="header__a" href="">
-              Yo menos
-            </a>
-          </ul>
-        </nav>
+
+    <div className='navbar'>
+      <div className='preHeader'>
+          <div className='left'>
+              email@email.com
+          </div>
+          <div className='right'>
+            Iniciar sesión
+          </div>
+      </div>
+      <div className="header__menu-container">
+        <div id='logo'>
+          STORE
+        </div>
+        <div className="header__nav-container">
+          <nav className="header__nav">
+            <Button><Link to='/'>Inicio</Link></Button>
+            <Button><Link to='/tienda'>Tienda</Link></Button>
+            <Button><Link to='/cart'>Carrito</Link></Button>
+          </nav>
+      
+        </div>
+        <Stack spacing={2} sx={{ width: 300 }}>
+              <Autocomplete
+                id="free-solo-demo"
+                freeSolo
+                options={product.map((option) => option.title)}
+                renderInput={(params) => <TextField {...params} label="Buscar" />}
+              />
+            </Stack>
       </div>
     </div>
   );
@@ -50,3 +92,4 @@ export default AddNavbar;
 //       }
 //     });
 //   }
+
