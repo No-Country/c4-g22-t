@@ -1,6 +1,5 @@
 import './App.css';
 import Homepage from './pages/Homepage';
-import Navbar from './components/Navbar/Navbar';
 import {BrowserRouter, Routes, Route}  from 'react-router-dom';
 import Store from './pages/Store';
 import ProductDetail from './pages/ProductDetail';
@@ -10,7 +9,7 @@ import PageOrderCompleted from './pages/OrderCompleted';
 import Cart from './components/Cart/Cart';
 import {CartProvider} from './components/context/CartContext';
 import PageMyAccount from './pages/MyAccount';
-
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
 
           <CartProvider>
             <BrowserRouter>
-              <AddNavbar/>
+              <Navbar/>
               <Routes>
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="/order%20completed" element={<PageOrderCompleted/>}/>
