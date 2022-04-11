@@ -55,16 +55,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post("/signOut",  async (req,res) => {
-
-  const email = req.body.email
-  console.log(req.body.email)
-
-  const user = await User.findOne({email})
-
-  await user.save()
-  res.status(200).json({success:true, response:"Closed assignment"})
-
-}),
-
 module.exports = router;
