@@ -55,6 +55,9 @@ router.post("/login", async (req, res) => {
   }
 });
 
+//SIGN OUT 
+
+
 router.post("/signOut",  async (req,res) => {
 
   const email = req.body.email
