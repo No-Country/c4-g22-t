@@ -10,6 +10,7 @@ import Cart from './components/Cart/Cart';
 import {CartProvider} from './components/context/CartContext';
 import PageMyAccount from './pages/MyAccount';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/cart" element={<Cart/>}/>
                 <Route path="/my%20account" element={<PageMyAccount/>}/>
               </Routes>
+              <Footer/>
             </BrowserRouter>
           </CartProvider>
           
