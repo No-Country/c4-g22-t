@@ -10,7 +10,7 @@ function Footer() {
       <Container>
         <div className="footer-all-content-container">
           <div className="footer-column">
-            <h2 className="footer-title">Customer Care</h2>
+            <h2 className="footer-title">Account</h2>
             <ul className="footer-unlistened">
               <li className="footer-lista">
                 <a className="footer-lista__a" href="/my%20account">
@@ -18,13 +18,13 @@ function Footer() {
                 </a>
               </li>
               <li className="footer-lista">
-                <a className="footer-lista__a" href="">
-                  Order History
+                <a className="footer-lista__a" href="/log%20in">
+                  Log in
                 </a>
               </li>
               <li className="footer-lista">
-                <a className="footer-lista__a" href="">
-                  Returns
+                <a className="footer-lista__a" href="/register">
+                  Register
                 </a>
               </li>
             </ul>
