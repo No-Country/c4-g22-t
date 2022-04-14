@@ -6,37 +6,40 @@ function TrendingProduct() {
     <div key="sillon-zone" className="lista-producto-all">
       <div>
         <div className="contenedor-imagenes-sofa">
-          <img src={sillon} />
+          <img className="contenedor-imagenes-sofa__sofa" src={sillon} />
         </div>
       </div>
-      <div>
+      <div className="zona-listas-y-botones">
         <div className="lista">
           <h2 className="lista-titulo">
-            Unique Features Of leatest & Trending Poducts
+            Unique Features Of leatest & Trending Products
           </h2>
         </div>
-        <div className="lista">
-          <div className="puntote"></div>
-          <p className="lista-texto">
-            All frames constructed with hardwood solids and laminates
-          </p>
-        </div>
 
-        <div className="lista">
-          <div className="puntote"></div>
-          <p className="lista-texto">
-            Reinforced with double wood dowels, glue, screw - nails corner
-            blocks and machine nails
-          </p>
-        </div>
+        <div className="contenedor-de-listas">
+          <div className="lista">
+            <li className="lista-texto">
+              <span>
+                All frames constructed with hardwood solids and laminates
+              </span>
+            </li>
+          </div>
 
-        <div className="lista">
-          <div className="puntote"></div>
-          <p className="lista-texto">
-            Arms, backs and seats are structurally reinforced
-          </p>
-        </div>
+          <div className="lista">
+            <li className="lista-texto">
+              <span>
+                Reinforced with double wood dowels, glue, screw - nails corner
+                blocks and machine nails
+              </span>
+            </li>
+          </div>
 
+          <div className="lista">
+            <li className="lista-texto">
+              <span>Arms, backs and seats are structurally reinforced</span>
+            </li>
+          </div>
+        </div>
         <div className="lista-descripcion-carrito">
           <div>
             <button className="lista-boton-agregar-al-carrito">
