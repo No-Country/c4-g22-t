@@ -11,6 +11,7 @@ import {CartProvider} from './components/context/CartContext';
 import PageMyAccount from './pages/MyAccount';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/footer';
+import PageRegister from './pages/Register';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
                 <Route path="/tienda" element={<Store/>}/>
                 <Route path="/producto/:category/:id" element={<ProductDetail/>}/>
                 <Route path="/cart" element={<Cart/>}/>
-                <Route path="/my%20account" element={<PageMyAccount/>}/>
+                <Route path="/log%20in" element={<PageMyAccount/>}/>
+                <Route path="/register" element={<PageRegister/>}/>
               </Routes>
               <Footer/>
             </BrowserRouter>
