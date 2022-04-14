@@ -14,13 +14,30 @@
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
   font-size: 42px;
-  color: rgba(21, 24, 117, 1)
+  color: rgba(21, 24, 117, 1);
+  text-align: center;
 }
 .columnas {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 28px;
 }
+@media(max-width: 600px) {
+  .columnas {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+  .columnas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .columnas {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .wso--contenido {
   padding: 10px;
   display: flex;
