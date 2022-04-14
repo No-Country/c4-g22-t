@@ -6,7 +6,11 @@
   display: flex;
   justify-content: space-between;
 }
-
+.preheader-log-in {
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+}
 .header {
     display: flex;
     justify-content: space-between;

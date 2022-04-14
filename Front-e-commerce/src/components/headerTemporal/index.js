@@ -37,7 +37,7 @@ export function AddNavbar() {
               email@email.com
           </div>
           <div className='right'>
-            Iniciar sesión
+            <a className="preheader-log-in" href="/log%20in">Log in</a>
           </div>
       </div>
       <div className="header__menu-container">
