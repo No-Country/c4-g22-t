@@ -3,7 +3,8 @@ import ItemList from './ItemList';
 import ListProducts from '../utils/listProducts';
 import { useState, useEffect } from "react";
 import { Box } from '@mui/material';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import "./ItemListContainer.css"
 
 
 
@@ -52,14 +53,7 @@ const ItemListContainer = () => {
 
     return(
         <>
-            <Box
-                sx={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                borderRadius: 1,
-                paddingY: '2rem'
-                }}
-            >
+            <Box className='itemListContainer-box'>
                 <ItemList productos={products}/>
             </Box>
             
