@@ -22,10 +22,7 @@ const CartProvider = ({children}) => {
         }else{
             console.log("Producto duplicado") 
         }
-
-    } 
-
-    
+    }
 
     const removeItem = (id) => {
         setCartProducts( cartProducts.filter(item => item.id !== id) )

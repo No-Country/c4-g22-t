@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useEffect } from "react";
 
@@ -6,6 +7,9 @@ import { useStateValue } from "./reducer/StateProvider";
 import axios from "axios";
 
 
+=======
+import './App.css';
+>>>>>>> main
 import Homepage from './pages/Homepage';
 import {BrowserRouter, Routes, Route}  from 'react-router-dom';
 import Store from './pages/Store';

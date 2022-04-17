@@ -11,7 +11,7 @@
     justify-content: center;
     padding: 50px 55px;
 }
-.form-login-container {
+.form-register-container {
     /* background-color: red; */
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     width: 432px;
 }
 @media (max-width: 600px) {
-    .form-login-container {
+    .form-register-container {
         width: 400px;
     }
 }
@@ -58,7 +58,7 @@
     padding: 13px;
     width: 100%;
 }
-.form-login__button--send {
+.form-register__button--send {
     width: 100%;
     padding: 14px;
     color: white;
@@ -71,6 +71,6 @@
     font-family: 'Lato', sans-serif;
     font-weight: 700;
 }
-.form-login__button--send:hover {
+.form-register__button--send:hover {
     cursor: pointer;
 }
