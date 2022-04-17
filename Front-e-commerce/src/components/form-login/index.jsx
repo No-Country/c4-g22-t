@@ -5,7 +5,9 @@ function AddFormLogin() {
       <form className="form-login-container">
         <div className="full-width">
           <h2 className="form-title text-align-center">Login</h2>
-          <h3 className="form-body text-align-center">Please login using account detail bellow.</h3>
+          <h3 className="form-body text-align-center">
+            Please login using account detail bellow.
+          </h3>
         </div>
         <div className="full-width form-inputs-container">
           <label>
@@ -26,7 +28,12 @@ function AddFormLogin() {
           <button className="form-login__button--send">Sign In</button>
         </div>
         <div className="full-width">
-          <h3 className="form-body text-align-center">Don’t have an Account?Create account</h3>
+          <h3 className="form-body text-align-center">
+            Don’t have an Account?{" "}
+            <a className="form-body" href="/register">
+              Create Account
+            </a>
+          </h3>
         </div>
       </form>
     </div>
