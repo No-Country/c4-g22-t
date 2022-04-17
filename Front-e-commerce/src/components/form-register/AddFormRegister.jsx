@@ -2,7 +2,7 @@ import "./AddFormRegister.css";
 function AddFormRegister() {
   return (
     <div className="afl-container">
-      <form className="form-login-container">
+      <form className="form-register-container">
         <div className="full-width">
           <h2 className="form-title text-align-center">Register</h2>
           <h3 className="form-body text-align-center">
@@ -43,12 +43,14 @@ function AddFormRegister() {
           </label>
         </div>
         <div className="full-width">
-          <button className="form-login__button--send">Create Account</button>
+          <button className="form-register__button--send">
+            Create Account
+          </button>
         </div>
         <div className="full-width">
           <h3 className="form-body text-align-center">
             You have an Account?{" "}
-            <a className="form-body" href="/my%20account">
+            <a className="form-body" href="/log%20in">
               Log in
             </a>
           </h3>

@@ -21,6 +21,11 @@
     width: 550px;
     width: 432px;
 }
+@media (max-width: 600px) {
+    .form-login-container {
+        width: 400px;
+    }
+}
 .full-width {
     width: 100%;
 }
