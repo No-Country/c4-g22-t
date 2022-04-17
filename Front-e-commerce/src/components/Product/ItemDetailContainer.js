@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import ListProducts from '../utils/listProducts'
 import ItemDetail from "./ItemDetail"
 import {useParams} from 'react-router-dom'
+import { useStateValue } from "../../reducer/StateProvider"
 
 
 
@@ -11,6 +12,9 @@ const urlImgs = "/images/"
 
 const ItemDetailContainer = () => {
 
+    const [{productos}, dispatch]=useStateValue()
+    console.log(productos)
+
     const { id} = useParams()
 
     const [product, setProduct] = useState([])
@@ -18,7 +22,7 @@ const ItemDetailContainer = () => {
     const getProduct = () => {
         return new Promise((resolve, reject) => {
             return setTimeout(() => {
-                resolve(ListProducts)
+                resolve(productos)
             });
         })
     } 
@@ -26,7 +30,7 @@ const ItemDetailContainer = () => {
     useEffect( () => {
         getProduct().then( (filterProducts) => {  
             filterProducts.map( (productFound)  => {
-                if (productFound.id == id){
+                if (productFound._id == id){
                     return setProduct(productFound)  
                 }
             })

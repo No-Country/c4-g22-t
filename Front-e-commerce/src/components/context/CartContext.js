@@ -1,8 +1,16 @@
 import { createContext, useState } from "react";
+import { useStateValue } from "../../reducer/StateProvider"
 
-const CartContext = createContext([])
+const CartContext = createContext([]) 
 
 const CartProvider = ({children}) => {
+
+      const [{productos}, dispatch]=useStateValue()
+
+      
+      const product = productos
+      
+      console.log(product)
 
     const [cartProducts, setCartProducts] = useState([])
     
