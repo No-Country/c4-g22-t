@@ -4,12 +4,12 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
 
-const ItemCount = ({inStock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
     const [count, setCount] = useState(initial)  
     
     const addProduct = () => {
-        if(count<inStock){
+        if(count<stock){
             setCount(count + 1)
         }
     }
