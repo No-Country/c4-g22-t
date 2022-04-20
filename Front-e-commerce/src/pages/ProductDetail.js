@@ -1,25 +1,20 @@
-
+import ListProducts from '../components/utils/listProducts';
 import Container from '@mui/material/Container';
 import {useParams} from 'react-router-dom'
 import {useEffect} from 'react'
 import ItemDetailContainer from '../components/Product/ItemDetailContainer';
 import AddWhereIAm from '../components/whereIAm';
-import { useStateValue } from '../reducer/StateProvider';
 
 function ProductDetail() {
 
-    const [{productos}, dispatch]=useStateValue()
-
-    console.log(productos)
-
     const {category, id} = useParams()
     console.log(`Este es el id del producto ${id} de categoria ${category}`)
-    console.log(`Mock`,productos)
+    console.log(`Mock`,ListProducts)
 
 
     const filterProductById = () => {
-        return productos.map( (product)  => {
-            if (product._id == id){
+        return ListProducts.map( (product)  => {
+            if (product.id == id){
                 return console.log("Filtro",product)
             }
         })

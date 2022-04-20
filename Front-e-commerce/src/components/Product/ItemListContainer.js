@@ -1,14 +1,11 @@
 import './ItemListContainer.css';
 import ItemList from './ItemList';
-
-
-import { useStateValue } from "../../reducer/StateProvider";
-
+import ListProducts from '../utils/listProducts';
 import { useState, useEffect } from "react";
 import { Box } from '@mui/material';
 import { useParams } from 'react-router-dom';
+import "./ItemListContainer.css"
 
-import axios from "axios";
 
 
 
@@ -16,12 +13,6 @@ const urlImgs = "/images/"
 
 
 const ItemListContainer = () => {
-    const [{productos}, dispatch]=useStateValue()
-
-
-  
-   
-
     
     const { category } = useParams()
     const [products, setProducts] = useState([])
@@ -29,14 +20,14 @@ const ItemListContainer = () => {
     const getProducts = () => {
         return new Promise((resolve, reject) => {
             return setTimeout(() => {
-                resolve(productos)
+                resolve(ListProducts)
             },1000);
         })
     }
         
     useEffect( () => {
         getProducts().then( (addProducts) => {                     
-            if( addProducts.find(foundCategory => foundCategory.categories == category) ){ 
+            if( addProducts.find(foundCategory => foundCategory.category == category) ){ 
                 setProducts([]) 
                 filterProductByCategory(addProducts, category)
             } else {                 
@@ -51,9 +42,9 @@ const ItemListContainer = () => {
     }, [category])
 
 
-    const filterProductByCategory = (arrayProducts , category) => {       
+    const filterProductByCategory = (arrayProducts , category) => {
         return arrayProducts.map( (product, i) => {
-            if(product.categories == category) { 
+            if(product.category == category) { 
                return setProducts(products => [...products, product]);
             }
         })
