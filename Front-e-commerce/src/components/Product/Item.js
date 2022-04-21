@@ -1,42 +1,47 @@
 import {Link} from 'react-router-dom';
 import '@fontsource/roboto/500.css';
 import { CardActionArea, Button, Typography, CardMedia, CardContent, Card, Paper, Box } from '@mui/material';
-import './featureProduct.css'
-<style>
-</style>
+import './featureProduct.css';
+import { useStateValue } from '../../reducer/StateProvider';
+
 
 const urlImgs="/products/"
+ 
 
 
+export default function Item() {
 
-export default function Item({data}) {
+  const [{productos}, dispatch]=useStateValue()
 
-  const {id, title, price, detail, img, stock, category} = data
+ 
+
+  
 
 
     return (
-      <>
+      <div>
        
         
+      {productos.map(producto =>(
           <Paper>
-          <Card>
-            <Link to={`/producto/${category}/${id}`}>
-            <CardActionArea>
+          <Card> 
+            <Link to={`/producto/${producto.categories}/${producto._id}`}>
+              <CardActionArea>
                 <CardMedia
                   component="img"
                   height="230"
-                  image={urlImgs+img}
+                  image={producto.img}
                   alt="camiseta"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h6" component="div" className='titleProduct alignCenter'>
-                    {title}
+                    {producto.title}
                   </Typography>
                   <Typography gutterBottom variant="body2" color="text.secondary" className='alignCenter'>
-                    {category}
+                    {producto.categories}
                   </Typography>
                   <Typography  variant="button" component="div" className='price alignCenter'>
-                    $ {price}
+                    ${producto.price}
                   </Typography>
                   <Button sx={{marginY:'20px'}}variant="outlined" fullWidth={true}
                                     size="large"
@@ -44,10 +49,15 @@ export default function Item({data}) {
                                 </Button>
                 </CardContent>
             </CardActionArea>
+
+
+
+
             </Link>
-          </Card>
-          </Paper>
+            </Card>
+            </Paper>
+            ))}
       
-      </>
+      </div>
     );
   }
