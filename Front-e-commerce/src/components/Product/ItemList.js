@@ -2,9 +2,14 @@ import { useState, useEffect } from "react";
 import './ItemList.css'
 import Item from "./Item";
 import Box from '@mui/material/Box';
+import { useStateValue } from "../../reducer/StateProvider";
 
 
-const ItemList = ({productos}) => {
+const ItemList = () => {
+
+    const [{productos}, dispatch]=useStateValue()
+
+    console.log(productos)
 
     return(
         <>        
@@ -15,7 +20,7 @@ const ItemList = ({productos}) => {
                     return(
                         <Box key={id} 
                         className="itemProducto">
-                            <Item data={product} />
+                            <Item/>
                         </Box>
                     )
             })}                                        
