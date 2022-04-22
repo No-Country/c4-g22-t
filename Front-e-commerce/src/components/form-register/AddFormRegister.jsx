@@ -50,7 +50,7 @@ function AddFormRegister() {
         <div className="full-width">
           <h3 className="form-body text-align-center">
             You have an Account?{" "}
-            <a className="form-body" href="/log%20in">
+            <a className="form-body" href="/login">
               Log in
             </a>
           </h3>

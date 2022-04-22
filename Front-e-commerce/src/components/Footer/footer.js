@@ -18,7 +18,7 @@ function Footer() {
                 </a>
               </li>
               <li className="footer-lista">
-                <a className="footer-lista__a" href="/log%20in">
+                <a className="footer-lista__a" href="/login">
                   Log in
                 </a>
               </li>
