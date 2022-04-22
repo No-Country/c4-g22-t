@@ -9,7 +9,7 @@ import Homepage from './pages/Homepage';
 import {BrowserRouter, Routes, Route}  from 'react-router-dom';
 import Store from './pages/Store';
 import ProductDetail from './pages/ProductDetail';
-import AddNavbar from './components/headerTemporal';
+import AddNavbar from './components/NavBar';
 import './components/headerTemporal/index.css';
 import PageOrderCompleted from './pages/OrderCompleted';
 import Cart from './components/Cart/Cart';
