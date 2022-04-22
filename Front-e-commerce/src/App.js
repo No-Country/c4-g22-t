@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import React, { useEffect } from "react";
 
 import { actionType } from "./reducer/reducer";
@@ -7,9 +5,6 @@ import { useStateValue } from "./reducer/StateProvider";
 import axios from "axios";
 
 
-=======
-import './App.css';
->>>>>>> main
 import Homepage from './pages/Homepage';
 import {BrowserRouter, Routes, Route}  from 'react-router-dom';
 import Store from './pages/Store';
@@ -20,7 +15,7 @@ import PageOrderCompleted from './pages/OrderCompleted';
 import Cart from './components/Cart/Cart';
 import {CartProvider} from './components/context/CartContext';
 import PageMyAccount from './pages/MyAccount';
-import Navbar from './components/Navbar/Navbar';
+
 import Footer from './components/Footer/footer';
 import PageRegister from './pages/Register';
 
@@ -54,11 +49,11 @@ function App() {
               <AddNavbar/>
               <Routes>
                 <Route path="/" element={<Homepage/>}/>
-                <Route path="/order%20completed" element={<PageOrderCompleted/>}/>
+                <Route path="/ordercompleted" element={<PageOrderCompleted/>}/>
                 <Route path="/tienda" element={<Store/>}/>
                 <Route path="/producto/:category/:id" element={<ProductDetail/>}/>
                 <Route path="/cart" element={<Cart/>}/>
-                <Route path="/log%20in" element={<PageMyAccount/>}/>
+                <Route path="/login" element={<PageMyAccount/>}/>
                 <Route path="/register" element={<PageRegister/>}/>
               </Routes>
               <Footer/>
