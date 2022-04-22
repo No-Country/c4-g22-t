@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Stack, Autocomplete, TextField, Button } from '@mui/material'
-import ListProducts from '../utils/listProducts';
+
 import { useState, useEffect } from "react";
 import {Link} from 'react-router-dom';
 
@@ -13,7 +13,7 @@ export function AddNavbar() {
   const getProduct = () => {
     return new Promise((resolve, reject) => {
         return setTimeout(() => {
-            resolve(ListProducts)
+            resolve(product)
         });
     })
   } 
