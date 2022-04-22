@@ -9,23 +9,14 @@ const ItemList = () => {
 
     const [{productos}, dispatch]=useStateValue()
 
-    console.log(productos)
+    console.log(productos);
 
     return(
         <>        
-        
-        {productos.map( ( product ) => {
-                    const {id} = product
-
-                    return(
-                        <Box key={id} 
+                        <Box key={1} 
                         className="itemProducto">
                             <Item/>
-                        </Box>
-                    )
-            })}                                        
-                        
-            
+                        </Box>                                         
         </>
     ) 
 }
