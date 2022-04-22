@@ -19,11 +19,11 @@ export default function Item() {
 
 
     return (
-      <div>
+      <div className='item-products-container'>
        
         
       {productos.map(producto =>(
-          <Paper>
+          <Paper className='item-product'>
           <Card> 
             <Link to={`/producto/${producto.categories}/${producto._id}`}>
               <CardActionArea>
