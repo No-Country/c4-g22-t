@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom";
 import Container from "@mui/material/Container";
 import AddWhereIAm from "../components/whereIAm/index.js";
-import Navbar from "../components/Navbar/Navbar.js";
 import AddFormRegister from "../components/form-register/AddFormRegister.jsx";
 
 function PageRegister() {
