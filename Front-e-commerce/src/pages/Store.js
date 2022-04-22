@@ -8,8 +8,6 @@ function Store() {
     <>
         <AddWhereIAm whereIAm="Store"/>
         <Container maxWidth="lg">
-            <h1>Tienda</h1>
-            
             <ItemListContainer/>
         </Container>
     </>
