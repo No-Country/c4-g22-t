@@ -4,7 +4,7 @@ import AddFormLogin from "../components/form-login/index.jsx";
 import AddWhereIAm from "../components/whereIAm/index.js";
 
 
-function PageMyAccount() {
+function PageLogin() {
   return (
     <>
       <div id="app"></div>
@@ -16,4 +16,4 @@ function PageMyAccount() {
   );
 }
 
-export default PageMyAccount;
+export default PageLogin;
