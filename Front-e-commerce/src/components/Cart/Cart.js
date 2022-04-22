@@ -33,11 +33,10 @@ const Cart = () => {
         <div>
         <Container maxWidth="lg">
         {console.log(cartProducts.length) }
-        {     
-            cartProducts.length > 0 ? (
-                cartProducts.map ( (productsAdded) => {
+        { cartProducts.map ( (productsAdded) => {
                    /*  const {title, img, price, _id, quantityToAdd} = productsAdded */
-                    let total = productsAdded.price * productsAdded.quantityToAdd;
+                    let total = productsAdded[0].price * productsAdded.quantityToAdd;
+                    console.log(productsAdded[0].title)
                     
                     return(  
                         
@@ -55,14 +54,14 @@ const Cart = () => {
                                            </TableHead>
                                            <TableBody>
                                                 <TableRow
-                                                    key={productsAdded._id}
+                                                    key={productsAdded[0]._id}
                                                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                                 >
                                                     <TableCell scope="row"  align="center">
-                                                    <img className="thumbImg" src={productsAdded.img}/>
+                                                    <img className="thumbImg" src={productsAdded[0].img}/>
                                                     </TableCell>
-                                                    <TableCell align="center">{productsAdded.title}</TableCell>
-                                                    <TableCell align="center">{productsAdded.price}</TableCell>
+                                                    <TableCell align="center">{productsAdded[0].title}</TableCell>
+                                                    <TableCell align="center">{productsAdded[0].price}</TableCell>
                                                     <TableCell align="center">{productsAdded.quantityToAdd}</TableCell>
                                                     <TableCell align="center">{total}</TableCell>
                                                     <TableCell align="center"><DeleteIcon className='deleteButton' onClick={() => removeItem(productsAdded._id) } /></TableCell>
@@ -71,9 +70,9 @@ const Cart = () => {
                                          </Table>
                                        </TableContainer>
                                     ) 
-                            })
-                ) : <p>No hay productos agregados</p>        
-            }
+                            })}
+                
+            
             </Container>
         </div>
     )
